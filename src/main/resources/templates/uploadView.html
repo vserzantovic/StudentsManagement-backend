@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="/upload" method="post" enctype="multipart/form-data">
+
+<!--    <select th:field="*{sortingTypes}" name="test" id="test1">-->
+<!--        <option value="">Select order type</option>-->
+<!--        <option th:each="type : ${sortingTypes}" th:value="${type}" th:text="${type}"></option>-->
+<!--    </select>-->
+
+    <select name="sortingType" id="sortingType">
+        <option value="">Select order type</option>
+        <option th:each="type : ${sortingTypes}" th:value="${type}" th:text="${type}"></option>
+    </select>
+
+
+<!--    <input type="text" name="test" id="test"/>-->
+
+
+    <input type="file" name="files" multiple>
+    <input type="Submit"> Upload file</input>
+
+</form>
+
+</body>
+</html>

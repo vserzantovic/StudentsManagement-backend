@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div th:if="${msg}">
+    <span th:text="${msg}"></span>
+    <br/>
+    <span th:text="${sortingType}"></span>
+
+    <tr th:if="${studentList.empty}">
+        <td colspan="2"> No Students Available </td>
+    </tr>
+    <tr th:each="student : ${studentList}">
+        <td><p th:text="${student.name}"> Student name </p></td>
+        <td><p th:text="${student.points}"> Points </p></td>
+    </tr>
+</div>
+
+</body>
+</html>
